@@ -62,6 +62,7 @@ nav {
     background: #26DB7C;
     box-shadow: 6px 6px 0px 0px #000;
     padding: 10px;
+    font-size: 10px;
 }
 
 #white-btn {
@@ -69,8 +70,18 @@ nav {
     background: #FFF;
     box-shadow: 6px 6px 0px 0px #000;
     padding: 10px;
+    font-size: 10px;
 }
 
+@media screen and (min-width:1024px) {
+   #green-btn , #white-btn {
+    font-size: 15px;
+   }
+   #footer-btns{
+    margin-top: 100px;
+    margin-left: 100px;
+   }
+}
 
 #green-div {
     background-color: #26DB7C;
@@ -146,4 +157,34 @@ nav {
     
 }
 
+footer >img{ 
+    margin-left: 40%;
+}
 
+#footer-black{
+    background-image: url(./IMAGES/Group\ 35.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#social-media-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#social-media-links a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    #social-media-links {
+        margin-top: 20px;
+    }
+    
+}
