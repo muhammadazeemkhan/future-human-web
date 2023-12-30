@@ -136,27 +136,6 @@ nav {
 
 
 
-
-#loader{
-    height: 50px;
-    width: 50px;
-    border-top: 4px solid green;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    visibility: none;
-    animation: spin 1s infinite;
-
-}
-
-@keyframes spin {
-    100%{
-        transform: rotate(360deg);
-    }
-    
-}
-
 footer >img{ 
     margin-left: 40%;
 }
@@ -187,4 +166,31 @@ footer >img{
         margin-top: 20px;
     }
     
+}
+
+
+.custom-loader {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    color: #264653;
+    --c: radial-gradient(farthest-side, currentColor 92%, #0000);
+    background:
+        var(--c) 50% 0 /12px 12px,
+        var(--c) 50% 100%/12px 12px,
+        var(--c) 100% 50%/12px 12px,
+        var(--c) 0 50%/12px 12px,
+        var(--c) 50% 50%/12px 12px,
+        linear-gradient(currentColor 0 0) 50% 50%/4px 100%,
+        linear-gradient(currentColor 0 0) 50% 50%/100% 4px;
+    background-repeat: no-repeat;
+    animation: s8 1s infinite linear;
+}
+
+@keyframes s8 {
+    to {
+        transform: rotate(.5turn)
+    }
 }
